@@ -87,11 +87,23 @@ config.font_size = 15.0
 -- ==============================
 -- UI
 -- ==============================
+config.enable_tab_bar = true
+config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.9
 config.max_fps = 240
 config.enable_kitty_graphics = true
 config.enable_scroll_bar = false
+
+wezterm.on("update-right-status", function(window, pane)
+	local date = wezterm.strftime("%H:%M:%S    ")
+
+	-- Make it italic and underlined
+	window:set_right_status(wezterm.format({
+		{ Attribute = { Italic = true } },
+		{ Text = "" .. date },
+	}))
+end)
 
 -- ==============================
 -- Keys
