@@ -12,12 +12,12 @@ local config = {}
 -- IMPORTANT:
 -- In Wayland, if not defined, the default is "RESIZE"
 -- That's why we force it to NONE here
-config.window_decorations = "RESIZE"
+config.window_decorations = "NONE"
 
 -- ==============================
 -- Wayland
 -- ==============================
-config.enable_wayland = true
+config.enable_wayland = false
 
 -- ==============================
 -- Colors
@@ -101,7 +101,7 @@ config.keys = {
 	{ key = "l", mods = "CTRL|SHIFT", action = act.AdjustPaneSize({ "Right", 1 }) },
 	{ key = "k", mods = "CTRL|SHIFT", action = act.AdjustPaneSize({ "Up", 1 }) },
 	{ key = "j", mods = "CTRL|SHIFT", action = act.AdjustPaneSize({ "Down", 1 }) },
-	{ key = "Enter", mods = "ALT", action = act.DisableDefaultAssignment },
+	-- { key = "Enter", mods = "ALT", action = act.DisableDefaultAssignment },
 }
 -- ==============================
 -- Return config
