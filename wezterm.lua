@@ -82,7 +82,7 @@ config.font = wezterm.font_with_fallback({
 	"Symbols Nerd Font Mono",
 	"Noto Color Emoji",
 })
-config.font_size = 15.0
+config.font_size = 12.0
 
 -- ==============================
 -- UI
