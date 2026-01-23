@@ -1,0 +1,2 @@
+# jqnav Wezterm
+# jqnav-wezterm
