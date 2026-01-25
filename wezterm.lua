@@ -25,7 +25,7 @@ config.front_end = "WebGpu"
 -- ==============================
 config.colors = {
 	foreground = "#C9C7CD",
-	background = "#11111b",
+	background = "#1e1e2e",
 
 	cursor_bg = "#92A2D5",
 	cursor_fg = "#C9C7CD",
@@ -91,7 +91,7 @@ config.font_size = 12.0
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = 0.90
+config.window_background_opacity = 0.95
 config.adjust_window_size_when_changing_font_size = false
 config.max_fps = 240
 config.enable_kitty_graphics = true
