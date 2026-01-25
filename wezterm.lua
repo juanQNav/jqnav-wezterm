@@ -18,13 +18,14 @@ config.window_decorations = "NONE"
 -- Wayland
 -- ==============================
 config.enable_wayland = false
+config.front_end = "WebGpu"
 
 -- ==============================
 -- Colors
 -- ==============================
 config.colors = {
 	foreground = "#C9C7CD",
-	background = "#090f16",
+	background = "#1e1e2e",
 
 	cursor_bg = "#92A2D5",
 	cursor_fg = "#C9C7CD",
