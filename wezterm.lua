@@ -25,7 +25,7 @@ config.front_end = "WebGpu"
 -- ==============================
 config.colors = {
 	foreground = "#C9C7CD",
-	background = "#1e1e2e",
+	background = "#11111b",
 
 	cursor_bg = "#92A2D5",
 	cursor_fg = "#C9C7CD",
