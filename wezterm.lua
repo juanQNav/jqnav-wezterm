@@ -11,13 +11,12 @@ local config = {}
 -- ==============================
 -- IMPORTANT:
 -- In Wayland, if not defined, the default is "RESIZE"
--- That's why we force it to NONE here
-config.window_decorations = "NONE"
+config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 
 -- ==============================
 -- Wayland
 -- ==============================
-config.enable_wayland = false
+config.enable_wayland = true
 config.front_end = "WebGpu"
 
 -- ==============================
@@ -93,7 +92,9 @@ config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.95
 config.adjust_window_size_when_changing_font_size = false
-config.max_fps = 240
+config.animation_fps = 30
+config.max_fps = 60
+config.scrollback_lines = 5000
 config.enable_kitty_graphics = true
 config.enable_scroll_bar = false
 
@@ -116,6 +117,7 @@ config.keys = {
 	{ key = "k", mods = "CTRL|SHIFT", action = act.AdjustPaneSize({ "Up", 1 }) },
 	{ key = "j", mods = "CTRL|SHIFT", action = act.AdjustPaneSize({ "Down", 1 }) },
 	-- { key = "Enter", mods = "ALT", action = act.DisableDefaultAssignment },
+	{ key = "L", mods = "CTRL|SHIFT", action = wezterm.action.ShowDebugOverlay },
 }
 -- ==============================
 -- Return config
