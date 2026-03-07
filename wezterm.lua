@@ -90,7 +90,7 @@ config.font_size = 12.0
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = 0.95
+config.window_background_opacity = 1.0
 config.adjust_window_size_when_changing_font_size = false
 config.animation_fps = 30
 config.max_fps = 60
@@ -117,7 +117,7 @@ config.keys = {
 	{ key = "k", mods = "CTRL|SHIFT", action = act.AdjustPaneSize({ "Up", 1 }) },
 	{ key = "j", mods = "CTRL|SHIFT", action = act.AdjustPaneSize({ "Down", 1 }) },
 	-- { key = "Enter", mods = "ALT", action = act.DisableDefaultAssignment },
-	{ key = "L", mods = "CTRL|SHIFT", action = wezterm.action.ShowDebugOverlay },
+	-- { key = "o", mods = "CTRL|SHIFT", action = wezterm.action.ShowDebugOverlay },
 }
 -- ==============================
 -- Return config
