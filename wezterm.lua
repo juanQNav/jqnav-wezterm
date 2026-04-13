@@ -116,6 +116,7 @@ config.keys = {
 	{ key = "l", mods = "CTRL|SHIFT", action = act.AdjustPaneSize({ "Right", 1 }) },
 	{ key = "k", mods = "CTRL|SHIFT", action = act.AdjustPaneSize({ "Up", 1 }) },
 	{ key = "j", mods = "CTRL|SHIFT", action = act.AdjustPaneSize({ "Down", 1 }) },
+	{ key = "t", mods = "SUPER", action = wezterm.action.DisableDefaultAssignment },
 	-- { key = "Enter", mods = "ALT", action = act.DisableDefaultAssignment },
 	-- { key = "o", mods = "CTRL|SHIFT", action = wezterm.action.ShowDebugOverlay },
 }
