@@ -119,6 +119,18 @@ config.keys = {
 	{ key = "t", mods = "SUPER", action = wezterm.action.DisableDefaultAssignment },
 	-- { key = "Enter", mods = "ALT", action = act.DisableDefaultAssignment },
 	-- { key = "o", mods = "CTRL|SHIFT", action = wezterm.action.ShowDebugOverlay },
+
+	-- Disable default Ctrl+Shift+Arrow pane navigation
+	{ key = "LeftArrow", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
+	{ key = "RightArrow", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
+	{ key = "UpArrow", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
+	{ key = "DownArrow", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
+
+	-- Use Vim-style pane navigation
+	{ key = "h", mods = "CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Left") },
+	{ key = "j", mods = "CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Down") },
+	{ key = "k", mods = "CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Up") },
+	{ key = "l", mods = "CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Right") },
 }
 -- ==============================
 -- Return config
