@@ -81,7 +81,7 @@ config.window_padding = {
 config.font = wezterm.font_with_fallback({
 	"JetbrainsMono Nerd Font",
 })
-config.font_size = 12.0
+config.font_size = 9.0
 
 -- ==============================
 -- UI
