@@ -79,9 +79,7 @@ config.window_padding = {
 -- Font
 -- ==============================
 config.font = wezterm.font_with_fallback({
-	"FiraCode Nerd Font Mono",
-	"Symbols Nerd Font Mono",
-	"Noto Color Emoji",
+	"JetbrainsMono Nerd Font",
 })
 config.font_size = 12.0
 
