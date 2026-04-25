@@ -11,7 +11,8 @@ local config = {}
 -- ==============================
 -- IMPORTANT:
 -- In Wayland, if not defined, the default is "RESIZE"
-config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+--config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+config.window_decorations = "NONE"
 
 -- ==============================
 -- Wayland
