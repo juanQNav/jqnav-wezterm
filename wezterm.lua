@@ -131,6 +131,18 @@ config.keys = {
 	{ key = "k", mods = "CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Up") },
 	{ key = "l", mods = "CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Right") },
 
+	-- Disable default Ctrl+Shift+Alt+Arrow pane resizing
+	{ key = "LeftArrow", mods = "CTRL|SHIFT|ALT", action = wezterm.action.DisableDefaultAssignment },
+	{ key = "RightArrow", mods = "CTRL|SHIFT|ALT", action = wezterm.action.DisableDefaultAssignment },
+	{ key = "UpArrow", mods = "CTRL|SHIFT|ALT", action = wezterm.action.DisableDefaultAssignment },
+	{ key = "DownArrow", mods = "CTRL|SHIFT|ALT", action = wezterm.action.DisableDefaultAssignment },
+
+	-- Use Vim-style pane resizing
+	{ key = "h", mods = "CTRL|SHIFT|ALT", action = wezterm.action.AdjustPaneSize({ "Left", 2 }) },
+	{ key = "j", mods = "CTRL|SHIFT|ALT", action = wezterm.action.AdjustPaneSize({ "Down", 2 }) },
+	{ key = "k", mods = "CTRL|SHIFT|ALT", action = wezterm.action.AdjustPaneSize({ "Up", 2 }) },
+	{ key = "l", mods = "CTRL|SHIFT|ALT", action = wezterm.action.AdjustPaneSize({ "Right", 2 }) },
+
 	-- Toggle for transparent background
 	{
 		key = "u",
