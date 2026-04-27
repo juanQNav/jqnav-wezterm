@@ -130,6 +130,21 @@ config.keys = {
 	{ key = "j", mods = "CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Down") },
 	{ key = "k", mods = "CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Up") },
 	{ key = "l", mods = "CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Right") },
+
+	-- Toggle for transparent background
+	{
+		key = "u",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action_callback(function(window, _)
+			local overrides = window:get_config_overrides() or {}
+			if overrides.window_background_opacity == 1.0 then
+				overrides.window_background_opacity = 0.85
+			else
+				overrides.window_background_opacity = 1.0
+			end
+			window:set_config_overrides(overrides)
+		end),
+	},
 }
 -- ==============================
 -- Return config
