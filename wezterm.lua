@@ -158,6 +158,25 @@ config.keys = {
 		end),
 	},
 }
+
+-- Disable default Ctrl+Shift+Number tab navigation
+for i = 1, 9 do
+	table.insert(config.keys, {
+		key = "!",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.DisableDefaultAssignment,
+	})
+end
+
+-- Use Ctrl+Alt+Number tab navigation
+for i = 1, 9 do
+	table.insert(config.keys, {
+		key = tostring(i),
+		mods = "ALT",
+		action = wezterm.action.ActivateTab(i - 1),
+	})
+end
+
 -- ==============================
 -- Return config
 -- ==============================
