@@ -157,6 +157,15 @@ config.keys = {
 			window:set_config_overrides(overrides)
 		end),
 	},
+
+	-- Swap panes
+	{
+		key = "s",
+		mods = "CTRL|SHIFT",
+		action = act.PaneSelect({
+			mode = "SwapWithActiveKeepFocus",
+		}),
+	},
 }
 
 -- Disable default Ctrl+Shift+Number tab navigation
