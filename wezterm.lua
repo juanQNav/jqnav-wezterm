@@ -166,6 +166,16 @@ config.keys = {
 			mode = "SwapWithActiveKeepFocus",
 		}),
 	},
+
+	-- map for clear terminal CTRL + l
+	{
+		key = "l",
+		mods = "CMD",
+		action = wezterm.action.Multiple({
+			wezterm.action.ClearScrollback("ScrollbackAndViewport"),
+			wezterm.action.SendKey({ key = "L", mods = "CTRL" }),
+		}),
+	},
 }
 
 -- Disable default Ctrl+Shift+Number tab navigation
