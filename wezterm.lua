@@ -176,6 +176,28 @@ config.keys = {
 			wezterm.action.SendKey({ key = "L", mods = "CTRL" }),
 		}),
 	},
+
+	-- use k and j like up/down arrow Vim-style (only in shell, not in TUIs)
+	{
+		key = "k",
+		mods = "ALT",
+		action = wezterm.action_callback(function(window, pane)
+			local process = pane:get_foreground_process_name()
+			if process and process:find("sh$") then
+				window:perform_action(act.SendKey({ key = "UpArrow", mods = "NONE" }), pane)
+			end
+		end),
+	},
+	{
+		key = "j",
+		mods = "ALT",
+		action = wezterm.action_callback(function(window, pane)
+			local process = pane:get_foreground_process_name()
+			if process and process:find("sh$") then
+				window:perform_action(act.SendKey({ key = "DownArrow", mods = "NONE" }), pane)
+			end
+		end),
+	},
 }
 
 -- Disable default Ctrl+Shift+Number tab navigation
