@@ -149,7 +149,7 @@ config.keys = {
 		mods = "ALT",
 		action = wezterm.action_callback(function(window, _)
 			local overrides = window:get_config_overrides() or {}
-			if overrides.window_background_opacity == 1.0 then
+			if overrides.window_background_opacity ~= 0.8 then
 				overrides.window_background_opacity = 0.8
 			else
 				overrides.window_background_opacity = 1.0
