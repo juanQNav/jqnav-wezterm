@@ -149,11 +149,33 @@ config.keys = {
 		mods = "ALT",
 		action = wezterm.action_callback(function(window, _)
 			local overrides = window:get_config_overrides() or {}
-			if overrides.window_background_opacity ~= 0.8 then
-				overrides.window_background_opacity = 0.8
+			if overrides.window_background_opacity ~= 0.75 then
+				overrides.window_background_opacity = 0.75
 			else
 				overrides.window_background_opacity = 1.0
 			end
+			window:set_config_overrides(overrides)
+		end),
+	},
+
+	-- Fine-grained opacity control (±0.05)
+	{
+		key = "+",
+		mods = "ALT",
+		action = wezterm.action_callback(function(window, _)
+			local overrides = window:get_config_overrides() or {}
+			local current = overrides.window_background_opacity or config.window_background_opacity or 1.0
+			overrides.window_background_opacity = math.min(1.0, current + 0.05)
+			window:set_config_overrides(overrides)
+		end),
+	},
+	{
+		key = "-",
+		mods = "ALT",
+		action = wezterm.action_callback(function(window, _)
+			local overrides = window:get_config_overrides() or {}
+			local current = overrides.window_background_opacity or config.window_background_opacity or 1.0
+			overrides.window_background_opacity = math.max(0.1, current - 0.05)
 			window:set_config_overrides(overrides)
 		end),
 	},
