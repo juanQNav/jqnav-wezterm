@@ -199,13 +199,13 @@ config.keys = {
 		}),
 	},
 
-	-- use k and j like up/down arrow Vim-style (only in shell, not in TUIs)
+	-- use k and j like up/down arrow Vim-style (shells only, not in TUIs)
 	{
 		key = "k",
 		mods = "ALT",
 		action = wezterm.action_callback(function(window, pane)
 			local process = pane:get_foreground_process_name()
-			if process and process:find("sh$") then
+			if process and (process:match("sh$") or process:match("nu$")) then
 				window:perform_action(act.SendKey({ key = "UpArrow", mods = "NONE" }), pane)
 			end
 		end),
@@ -215,7 +215,7 @@ config.keys = {
 		mods = "ALT",
 		action = wezterm.action_callback(function(window, pane)
 			local process = pane:get_foreground_process_name()
-			if process and process:find("sh$") then
+			if process and (process:match("sh$") or process:match("nu$")) then
 				window:perform_action(act.SendKey({ key = "DownArrow", mods = "NONE" }), pane)
 			end
 		end),
