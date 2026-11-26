@@ -25,7 +25,7 @@ config.front_end = "WebGpu"
 -- ==============================
 config.colors = {
 	foreground = "#C9C7CD",
-	background = "#1e1e2e",
+	background = "#11111A",
 
 	cursor_bg = "#92A2D5",
 	cursor_fg = "#C9C7CD",
@@ -81,7 +81,7 @@ config.window_padding = {
 config.font = wezterm.font_with_fallback({
 	"JetbrainsMono Nerd Font",
 })
-config.font_size = 9.0
+config.font_size = 10.0
 
 -- ==============================
 -- UI
@@ -149,8 +149,8 @@ config.keys = {
 		mods = "ALT",
 		action = wezterm.action_callback(function(window, _)
 			local overrides = window:get_config_overrides() or {}
-			if overrides.window_background_opacity ~= 0.75 then
-				overrides.window_background_opacity = 0.75
+			if overrides.window_background_opacity ~= 0.90 then
+				overrides.window_background_opacity = 0.90
 			else
 				overrides.window_background_opacity = 1.0
 			end
